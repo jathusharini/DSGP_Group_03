@@ -1,9 +1,9 @@
 *{
- 
-    font-family: 'Roboto', sans-serif;
+ font-family: 'Roboto', sans-serif;
 }
 
-ul {
+ul 
+{
   font-size: 24px;
   list-style-type: none;
   margin: 0;
@@ -14,47 +14,47 @@ ul {
   width: 100%;
 }
 
-li {
-    background-color: blue;
-    float: right;
-    position: relative;
-    top: 25px;
-    margin-left: 10px;
-    margin-right: 70px;
-  
-
-  
+li 
+{
+  background-color: #0048A4ff;
+  float: right;
+  position: relative;
+  top: 25px;
+  margin-left: 10px;
+  margin-right: 70px;
 }
 
-li a {
-  
+li a 
+{
   color: white;
   text-align: center;
   padding: 15px 30px;
   text-decoration: none;
 }
 
-.button {
-    background-color: #E08955;
-    
-   
+.button 
+{
+  background-color: #E08955;
 }
 
-.logo{
-    width: 100px;
-    height: 70px;
-    padding-top: 0px;
-    top: 10px;
+.logo
+{
+  width: 100px;
+  height: 70px;
+  padding-top: 0px;
+  top: 10px;
 }
 
-.head-div{
-    background-color: white;
-    position: relative;
-    top: 80px;
-    margin-left: 60px;
+.head-div
+{
+  background-color: white;
+  position: relative;
+  top: 80px;
+  margin-left: 60px;
 }
 
-.homeimg{
+.homeimg
+{
   width: 500px;
   height: 450px;
   position: relative;
@@ -62,45 +62,106 @@ li a {
   bottom: 350px;
 }
 
-.heading{
-    font-size: 80px;
-    font-weight: bold;
+.heading
+{
+  font-size: 80px;
+  font-weight: bold;
 }
 
-.para{
-    font-size: 20px;
-    font-weight: 400;
+.para
+{
+  font-size: 20px;
+  font-weight: 400;
 }
 
-footer {
-    text-align: left;
-    padding: 30px;
-    background-color: #0048A4ff;
-    color: white;
-    position: relative;
-    bottom: 250px;
-    width: 100%;
-    margin: 0;
-  }
-
-.address {
-    margin-left: 50px;
-    position: relative;
-    top: 30px;
+.site-footer
+{
+  background-color: #0048A4ff;
+  font-size:15px;
+  line-height:24px;
+  color:#ffff;
+  position: relative;
+  letter-spacing:0.5px;
+  height: 450px;
+}
+  
+.about
+{
+  position: relative;
+  left:0px;
+  padding-top:15px;
+  padding-left: 80px;
+}
+.abt
+{
+  position: relative;
+  color:#fff;
+  font-size:16px;
+}
+.aboutpara
+{
+  font-size:14;
 }
 
-.copyright-text{
-   text-align: right;
-   margin-right: 70px;
-  }
+.cat1
+{
+  position: relative;
+  left:50px;
+  padding-left: 730px;
+  bottom: 215px;
+}
+.cat2
+{
+  position: relative;
+  color:#fff;
+  font-size:16px;
+}
+.cat3
+{
+  font-size:14;
+}
 
+.ql1
+{
+  position: relative;
+  left:100px;
+  padding-left: 950px;
+  padding-top: 5px;
+  bottom: 480px;
+}
+.ql2
+{
+  position: relative;
+  color:#fff;
+  font-size:16px;
+}
+.ql3
+{
+  font-size:14;
+}
 
-.sm{
+hr
+{
+  border-top-color:#689AB8;
+  position: relative;
+  margin:30px;
+  opacity:2;
+  bottom: 400px;
+}
+
+.copyright-text
+{
+  position: relative;
+  margin:80px;
+  bottom: 460px;
+}
+
+.sm
+{
   width: 200px;
   height: 40px;
   position: relative;
-  left: 880px;
-  bottom: 120px;
+  left: 950px;
+  bottom: 565px;
 }
-  
 
