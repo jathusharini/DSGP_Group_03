@@ -1,266 +1,160 @@
 *{
-    position: relative;
-    font-family: 'Roboto', sans-serif;
+ 
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
-  font-size: 24px;
-  list-style-type: none;
-  margin: 0;
-  padding: 30px;
-  background-color: #0048A4ff;
-  position: relative;
-  top: 0;
-  width: 100%;
+font-size: 24px;
+list-style-type: none;
+margin: 0;
+padding: 30px;
+background-color: #0048A4ff;
+position: relative;
+top: 0;
+width: 100%;
 }
 
 li {
-  
-    float: right;
-    position: relative;
-    top: 25px;
-    margin-left: 10px;
-    margin-right: 70px;
-    color: white;  
+
+  float: right;
+  position: relative;
+  top: 25px;
+  margin-left: 10px;
+  margin-right: 70px;
+  color: white;  
 }
 
 li a {
-  
   color: white;
   text-align: center;
   padding: 15px 30px;
   text-decoration: none;
 }
 
-.button {
-    background-color: #E08955;
-    
-   
+.button1
+{
+  background-color: #E08955;
 }
 
 .logo{
-    width: 100px;
-    height: 70px;
-    padding-top: 0px;
-    top: 10px;
+  width: 100px;
+  height: 70px;
+  padding-top: 0px;
+  top: 10px;
 }
 
 .head-div{
-    background-color: white;
-    position: relative;
-    top: 20px;
-    margin-left: 150px;
+  background-color: white;
+  position: relative;
+  top: 40px;
+  margin-left: 150px;
 }
 
 .heading{
-    font-size: 30px;
-    font-weight: bold;
-    position: relative;
-}
-.content
-{
-    position: relative;
-    
-}
-.im1
-{
-    width: 300px;
-    height: 250px;
-    position: relative;
-    left:150px;
-    top: 20px;
-}
-.im1:hover
-{
-    background-color: #020202;
-    opacity: 0.3;
-}
-.middle1
-{
-    transition: .5s ease;
-    opacity: 1;
-    position: absolute;
-    top: 150px;
-    left: 300px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
-.text1
-{
-  background-color:#689AB8;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  padding: 16px 32px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.im2
-{
-    width: 300px;
-    height: 250px;
-    position: relative;
-    left:550px;
-    top: 280px;
-}
-.im2:hover
-{
-    background-color: #020202;
-    opacity: 0.3;
-}
-.middle2
-{
-    transition: .5s ease;
-    opacity: 1;
-    position: absolute;
-    top: 400px;
-    left: 1000px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
-.text2
-{
-  background-color:#689AB8;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  padding: 16px 32px;
+.menu1{
+  width: 100px;
+  height: 600px;
+  position: relative;
+  bottom: 50%;
 }
 
-.im3
-{
-    width: 300px;
-    height: 250px;
-    position: relative;
-    right:458px;
-    top: 280px;
-}
-.im3:hover
-{
-    background-color: #020202;
-    opacity: 0.3;
-}
-.middle3
-{
-    transition: .5s ease;
-    opacity: 1;
-    position: absolute;
-    top: 400px;
-    left: 300px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
-.text3
-{
-  background-color:#689AB8;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  padding: 16px 32px;
+.container {
+  position: relative;
+  margin-top: 100px;
+  width: 350px;
+  height: 250px;
 }
 
-.im4
-{
-    width: 300px;
-    height: 250px;
-    position: relative;
-    right: 412px;
-    top: 280px;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
 }
 
-.im4:hover
-{
-    background-color: #020202;
-    opacity: 0.3;
-}
-.middle4
-{
-    transition: .5s ease;
-    opacity: 1;
-    position: absolute;
-    top: 400px;
-    left: 650px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
-.text4
-{
-  background-color:#689AB8;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  padding: 16px 32px;
-}
-.im5
-{
-   width: 300px;
-   height: 250px;
-   position: relative;
-   bottom: 235px;
-   left:500px;
-}
-.im5:hover
-{
-    background-color: #020202;
-    opacity: 0.3;
-}
-.middle5 
-{
-    transition: .5s ease;
-    opacity: 1;
-    position: absolute;
-    top: 150px;
-    left: 650px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-    
-}
-.text5
-{
-  background-color:#689AB8;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  padding: 16px 32px;
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.648);
 }
 
-.im6
-{
-    width: 300px;
-    height: 250px;
-    position: relative;
-    left:550px;
-    bottom: 235px;
-}
-.im6:hover
-{
-    background-color: #020202;
-    opacity: 0.3;
-}
-.middle6
-{
-    transition: .5s ease;
-    opacity: 1;
-    position: absolute;
-    top: 150px;
-    left: 1000px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
-.text6
-{
-  background-color:#689AB8;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  padding: 16px 32px;
+img {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  left: 0;
 }
 
+.container:hover .title {
+  top: 90px;
+}
+
+.button {
+  position: absolute;
+  width: 350px;
+  left:0;
+  top: 50%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+  font-size: 20px;
+}
+
+.button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 4px white;
+  z-index: 1;
+}
+
+.container:hover .button {
+  opacity: 1;
+}
+
+.divimg0{
+  position: relative;
+  left: 10%;
+  bottom: 50px ;
+}
+.divimg1{
+  position: relative;
+  left: 40%;
+  bottom: 400px;
+}
+.divimg2{
+  position: relative;
+  left: 70%;
+  bottom: 750px;
+}
+.divimg3{
+  position: relative;
+  left: 10%;
+  bottom: 820px;
+}
+.divimg4{
+  position: relative;
+  left: 40%;
+  bottom: 1170px;
+}
+.divimg5{
+  position: relative;
+  left: 70%;
+  bottom: 1520px;
+}
 .menu1
 {
     width: 100px;
-    height: 650px;
+    height: 660px;
     position: relative;
-    bottom: 584px; 
+    bottom: 2156px; 
 }
 
 .site-footer
@@ -272,7 +166,7 @@ li a {
   position: relative;
   letter-spacing:0.5px;
   height: 450px;
-  bottom: 590px;
+  bottom: 2160px;
 }
   
 .about
