@@ -74,6 +74,13 @@ li a
   font-weight: 400;
 }
 
+.button1 {
+  background-color: #E35A01;
+  position: relative;  
+  bottom: 350px;
+  right: 765px;
+}
+
 .site-footer
 {
   background-color: #0048A4ff;
@@ -83,7 +90,7 @@ li a
   position: relative;
   letter-spacing:0.5px;
   height: 450px;
-  bottom:250px;
+  bottom:200px;
 }
   
 .about
