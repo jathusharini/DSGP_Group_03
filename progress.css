@@ -1,0 +1,122 @@
+*{
+ 
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  font-size: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 30px;
+  background-color: #0048A4ff;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  
+    float: right;
+    position: relative;
+    top: 25px;
+    margin-left: 10px;
+    margin-right: 70px;
+    color: white;  
+}
+
+li a {
+  
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+.logo{
+    width: 100px;
+    height: 70px;
+    padding-top: 0px;
+    top: 10px;
+}
+
+.head-div{
+    background-color: white;
+    position: relative;
+    top: 40px;
+    margin-left: 150px;
+}
+
+.h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 60px ;
+}
+.progress-container {
+    width: 90%;
+    text-align: left;
+    margin: 60px 60px;
+    
+  }
+  
+  .progress {
+    height: 30px;
+    position: relative;
+    background-color: #0048A4ff;
+    border-radius: 5px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #e35a01;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .percent-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  body{
+    -webkit-animation: move 10s ease infinite;
+    animation: move 10s ease infinite;
+    transform: translate3d(0, 0, 0);
+    background: linear-gradient(45deg, #f29661 30%, #5e9ef1 90%);
+  }
+  
+  .progress-bar1 {
+    width: 10%;
+  }
+  
+  .progress-bar2 {
+    width: 20%;
+  }
+  
+  .progress-bar3 {
+    width: 30%;
+  }
+  
+  .progress-bar4 {
+    width: 40%;
+  }
+  
+  .progress-bar5 {
+    width: 50%;
+  }
+  
+  .progress-bar6 {
+    width: 60%;
+  }
+  
+  .progress:hover .progress-bar {
+    width: 100%;
+  }
+  
