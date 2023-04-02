@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Language Translator</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="google" value="notranslate"/>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/progress.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <img class="logo" src="{{ url_for('static',filename='images/logo.jpeg') }}">
+            <i class="glyphicon glyphicon-cloud"></i>
+        </ul>
+    </nav>
+    <h2 class="h2">Progress</h2>
+
+    <div class="progress-container">
+      <h4>GREETINGS</h4>
+      <div class="progress">
+        <div class="progress-bar progress-bar1">
+          <span class="percent-label">10%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <h4>GENERAL</h4>
+      <div class="progress">
+        <div class="progress-bar progress-bar2">
+          <span class="percent-label">20%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <h4>FAMILY</h4>
+      <div class="progress">
+        <div class="progress-bar progress-bar3">
+          <span class="percent-label">30%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <h4>EMOTIONS</h4>
+      <div class="progress">
+        <div class="progress-bar progress-bar4">
+          <span class="percent-label">40%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <h4>PLACES</h4>
+      <div class="progress">
+        <div class="progress-bar progress-bar5">
+          <span class="percent-label">50%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <h4>QUESTION WORDS</h4>
+      <div class="progress">
+        <div class="progress-bar progress-bar6">
+          <span class="percent-label">60%</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static',filename='styles/script.js') }}"></script>
+  </body>
+</html>
