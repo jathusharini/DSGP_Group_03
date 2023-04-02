@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign Language Translator</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/welcomepage styles.css') }}">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+        
+
+      <div>
+        <nav>
+            <ul>
+                <img class="logo" src="{{ url_for('static', filename='images/logo.jpeg') }}">
+                <li><a class="button" href="signupform.html">Sign In</a></li>
+                <li><a class="button" href="registration page.html">Register</a></li>
+                <i class="glyphicon glyphicon-cloud"></i>
+              
+          </nav>
+      </div>
+
+
+
+      <div class="head-div">
+        <h1 class="heading">Welcome</h1>
+        <p class="para">We are Excited to have an enthusiastic student in SignIt.<br>Ready to take on a new challenge?<br>Learn Sinhala Sign Language and open up a world of possibilities.<br>
+          If you are not registered, click the register button to proceed with the lessons.</p>
+ 
+        <div>
+            <img class="homeimg" src="{{ url_for('static', filename='images/image32.PNG') }}" alt="">
+        </div>
+      </div>
+
+   
+    <div class="b3">
+        <li><a class="button1" href="user guide.html">User Guide</a></li>
+    </div>
+
+       <!--FOOTER-->
+        <footer class="site-footer">
+          <div class="footer">
+                <div class="about">
+                  <h6 class="abt">ABOUT</h6>
+                  <p class="aboutpara">
+                    This web application can be used to learn sign language which<br>
+                    may be useful in day-to-day life of hearing impaired people. <br>
+                    The goal of the website is to increase awareness and acceptance<br>
+                    of Sinhala sign language, particularly within the deaf and <br>
+                    hard-of-hearing community around the nation. </p>
+                </div>
+
+                <div class="cat1">
+                  <h6 class="cat2">CATEGORIES</h6>
+                  <p class="cat3">
+                    Greatings.<br>
+                    General.<br>
+                    family.<br>
+                    Emotions.<br>
+                    Places.<br>
+                    Question Words.
+                  </p>
+                </div>
+                <div class="ql1">
+                  <h6 class="ql2">QUICK LINKS</h6>
+                    <p class="ql3">
+                      About Us<br>
+                      Contact Us<br>
+                      Contribute<br>
+                      Privacy Policy
+                    </p>
+                </div>
+              <hr>
+            
+              <div class="row">
+                <div class="bottom">
+                  <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+                    <a href="#">Scanfcode</a>.
+                  </p>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <img class="sm" src="{{ url_for('static', filename='images/img54.PNG') }}" alt="">
+                  </div>
+                </div>                   
+             </div>
+          </div>
+        </footer>
+    </body>
+</html>
