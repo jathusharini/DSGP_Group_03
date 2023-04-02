@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 #Load the pre-trained model
 model_path = 'preprocessed_model.pkl'
-model = tf.keras.models.load_model('test_model')
+model = tf.keras.models.load_model('Final_Tf_mp_model')
 words = ['angry', 'bank', 'brother', 'bye', 'excuse me', 'father', 'good evening', 'good morning', 'good night', 'happy', 'hello', 'help', 'home', 'hospital', 'how much', 'hungry', 'love', 'mother', 'police station', 'sad', 'school', 'sister', 'sorry', 'thankyou', 'welcome', 'what', 'when', 'where', 'who', 'why']
 # Define the video stream
 cap = cv2.VideoCapture(0)
