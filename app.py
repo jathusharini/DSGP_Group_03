@@ -5,8 +5,8 @@ import os
 import cv2
 import numpy as np
 import tensorflow as tf
-from jinja2 import escape
-import pandas as pd
+import mediapipe as mp
+# import pandas as pd
 import pickle # the process of converting a Python object into a byte stream to store it in a file/database, maintain program state across sessions, or transport data over the network
 import joblib
 from keras.models import load_model
@@ -20,24 +20,62 @@ from keras.models import load_model
 app = Flask(__name__)
 
 #Load the pre-trained model
-model_path = 'models/preprocessed_model.pkl'
-model = pickle.load(
-  open(model_path, 'rb'))
-
+model_path = 'preprocessed_model.pkl'
+model = tf.keras.models.load_model('test_model')
+words = ['angry', 'bank', 'brother', 'bye', 'excuse me', 'father', 'good evening', 'good morning', 'good night', 'happy', 'hello', 'help', 'home', 'hospital', 'how much', 'hungry', 'love', 'mother', 'police station', 'sad', 'school', 'sister', 'sorry', 'thankyou', 'welcome', 'what', 'when', 'where', 'who', 'why']
 # Define the video stream
 cap = cv2.VideoCapture(0)
 
+def stretch(video, size):
+    arr = np.array(video)
+    n = len(arr)
+    x = np.linspace(0, n - 1, n)
+    new_x = np.linspace(0, n - 1, size)
+    new_arr = np.zeros((size, len(video[0])))
+    for i in range(size):
+        new_arr[:, i] = np.interp(new_x, x, arr[:, i])
+    
+    return new_arr
+
+# Preprocess video to get prediction
+def get_prediction(video):
+    mp_hands = mp.solutions.hands
+    with mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5) as hands:
+        vidcap = cv2.VideoCapture('recorded_video.webm')
+        success,frame = vidcap.read()
+        count = 0
+        test = []
+        while success:     
+            success,frame = vidcap.read()
+            if success:
+                image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                results = hands.process(image)
+                if results.multi_hand_landmarks:
+                    for hand_landmarks in results.multi_hand_landmarks:
+                        landmarks = hand_landmarks.landmark
+                        landmarks_array = np.array([[landmark.x, landmark.y, landmark.z] for landmark in landmarks])
+                        test.append(landmarks_array.flatten())
+
+    test2 = stretch(test, 63)
+    nptest = np.array([test2[:]])
+    z = model.predict(nptest)
+    print("test shape: ", nptest.shape, z)
+    result = words[np.argmax(z[0])]
+    print(result)
+    return result
+
 #------------------------------------------------------------------------------------------------------------------------
 # Define a function to perform the sign language detection
-def detect_sign_language(frame):
+def detect_sign_language(video):
+    return get_prediction(video)
     # Preprocess the frame
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    resized = cv2.resize(gray, (28, 28), interpolation=cv2.INTER_AREA)
-    X = np.array(resized).reshape(-1, 28, 28, 1)
+    # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # resized = cv2.resize(gray, (28, 28), interpolation=cv2.INTER_AREA)
+    # X = np.array(resized).reshape(-1, 28, 28, 1)
     
-    # Make a prediction using the model
-    y_pred = model.predict(X)
-    label = np.argmax(y_pred)
+    # # Make a prediction using the model
+    # y_pred = model.predict(X)
+    # label = np.argmax(y_pred)
    
 
 # Define a function to read frames from a video file and detect sign language in real-time
@@ -139,9 +177,11 @@ def detect():
 #               b'Content-Type: image/jpeg\r\n\r\n' + cv2.imencode('.jpg', frame)[1].tobytes() + b'\r\n')
                
 # Define the API endpoint for the live camera stream
-@app.route('/video_feed')
+@app.route('/video_feed', methods=['POST'])
 def video_feed():
-    return Response(detect_sign_language(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    video = request.files['video']
+    video.save('recorded_video.webm')
+    return Response(detect_sign_language(video), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 # Render In-Lesson Page
 @ app.route('/inlesson')
