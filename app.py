@@ -1,4 +1,6 @@
 # Importing essential libraries and modules
+import urllib.request
+
 from charset_normalizer import detect
 from flask import Flask, jsonify, render_template, request, url_for, redirect, Response
 import os
@@ -6,6 +8,9 @@ import cv2
 import numpy as np
 import tensorflow as tf
 import mediapipe as mp
+import webbrowser
+
+
 # import pandas as pd
 import pickle # the process of converting a Python object into a byte stream to store it in a file/database, maintain program state across sessions, or transport data over the network
 import joblib
@@ -25,6 +30,9 @@ model = tf.keras.models.load_model('Final_Tf_mp_model')
 words = ['angry', 'bank', 'brother', 'bye', 'excuse me', 'father', 'good evening', 'good morning', 'good night', 'happy', 'hello', 'help', 'home', 'hospital', 'how much', 'hungry', 'love', 'mother', 'police station', 'sad', 'school', 'sister', 'sorry', 'thankyou', 'welcome', 'what', 'when', 'where', 'who', 'why']
 # Define the video stream
 cap = cv2.VideoCapture(0)
+
+
+url = None
 
 def stretch(video, size):
     arr = np.array(video)
@@ -61,8 +69,54 @@ def get_prediction(video):
     z = model.predict(nptest)
     print("test shape: ", nptest.shape, z)
     result = words[np.argmax(z[0])]
-    print(result)
+    if "goodnight" in url:
+        if "good night" in result:
+            print(result)
+            answer(True,result)
+
+        else:
+            print("wrong decision!")
+            answer(False,result)
+
+    elif "bye" in url:
+        if "bye" in result:
+            print(result)
+            answer(True,result)
+        else:
+            print("wrong decision!")
+            answer(False,result)
+
+    elif "goodmorning" in url:
+        if "good morning" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print("Wrong decision!")
+            answer(False,result)
+
+    elif "goodevening" in url:
+        if "good evening" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print("Wrong decision!")
+            answer(False,result)
+
+    elif "hello" in url:
+        if "hello" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False,result)
+
     return result
+
+def index():
+    global url
+    url = request.url
+    return url
+
 
 #------------------------------------------------------------------------------------------------------------------------
 # Define a function to perform the sign language detection
@@ -85,7 +139,7 @@ def detect_sign_language_video(video_path):
         # Read a frame from the video file
         ret, frame = cap.read()
         if not ret:
-            break
+           break
         
         # Detect sign language in the frame
         label = detect_sign_language(frame)
@@ -96,6 +150,7 @@ def detect_sign_language_video(video_path):
         # Convert the frame to a byte string and yield it to the client
         ret, buffer = cv2.imencode('.jpg', frame)
         frame_bytes = buffer.tobytes()
+
 #////////////////////////////////////////////////////////////////
 
 def detect_objects(frame):
@@ -145,14 +200,42 @@ def generate_frames():
         # read a frame from the camera 
         success, frame = cap.read() 
         if not success: 
-            break 
-         # process the frame 
-        frame = detect_objects(frame)
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-    
-    # Release the video file
-    cap.release()
+            break
+
+        else:
+            # process the frame
+            frame = detect_objects(frame)
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+            break
+
+        # Release the video file
+        cap.release()
+def answer(condition,result):
+
+    message = "Hello, this is a pop-up message!"
+    if condition == True:
+        message = "Result is "+result
+    else:
+        message = "Wrong prediction!"
+
+    # Create an HTML file with the pop-up message
+    html = f"""<html>
+                <body>
+                    <script>
+                        alert("{message}")
+                    </script>
+                </body>
+              </html>"""
+
+    # Write the HTML code to a file
+    with open("popup.html", "w") as f:
+        f.write(html)
+
+    # Open the HTML file in the default web browser
+    webbrowser.open("popup.html")
+
+
 
 # Define a route to display the video stream
 @app.route('/detect')
@@ -187,6 +270,8 @@ def video_feed():
 @ app.route('/inlesson')
 def inlesson():
     title = 'In-Lesson'
+    url = index()
+
     return render_template('inlessonpage.html', title=title)
 
 # Render Welcome Page
@@ -224,6 +309,44 @@ def FAQ():
 def U_guide():
     title = 'User_Guide'
     return render_template('user guide.html', title=title)
+
+@ app.route('/profile')
+def profile():
+    title = 'Profile'
+    return render_template('profile.html', title=title)
+#---------------------------------------------------------------------------------------------------------
+@ app.route('/hello')
+def hello():
+    title = 'Hello'
+    url = index()
+    return render_template('inlessonpage.hello.html', title=title)
+
+@ app.route('/bye')
+def bye():
+    title = 'Bye'
+    url = index()
+    return render_template('inlessonpage.bye.html', title=title)
+
+@ app.route('/goodmorning')
+def goodmorning():
+    title = 'good morning'
+    url = index()
+    return render_template('inlessonpage.goodmorning.html', title=title)
+
+@ app.route('/goodnight')
+def goodnight():
+    title = 'Good Evening'
+    url = index();
+
+    return render_template('inlessonpage.goodnight.html', title=title)
+
+@ app.route('/goodevening')
+def goodevening():
+    title = 'Good evening'
+    url = index()
+    return render_template('inlessonpage.goodevening.html', title=title)
+
+
 
 # Run Flask app
 if __name__=='__main__':

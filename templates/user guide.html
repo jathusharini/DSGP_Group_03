@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="google" value="notranslate"/>
         <link rel="stylesheet" href="{{ url_for('static',filename='styles/user guide styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/menu.css') }}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
@@ -16,11 +17,63 @@
             <nav>
                 <ul>
                     <img class="logo" src="{{ url_for('static',filename='images/logo.jpeg') }}">
-                    <li><a class="button" href="#Sign In">Sign In</a></li>
-                    <li><a class="button" href="#Register">Register</a></li>
+                    <!--<li><a class="button" href="#Sign In">Sign In</a></li>
+                    <li><a class="button" href="#Register">Register</a></li> -->
                     <i class="glyphicon glyphicon-cloud"></i>
                 </ul>
             </nav>
+        </div>
+         <div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                           Home
+                        </span>
+                    </a>
+                    <br>
+
+                </li>
+               <!-- <li>
+                    <a href="progress.html">
+                        <i class="fa fa-solid fa-signal"></i>
+                        <span class="nav-text">
+                           Progress
+                        </span>
+                    </a>
+                    <br>
+                </li>-->
+                <li>
+                    <a href="{{ url_for('lesson') }}">
+                        <i class="fa fa-book fa-2x"></i>
+                        <span class="nav-text">
+                           Lessons
+                        </span>
+                    </a>
+                    <br>
+                </li>
+                <li>
+                   <a href="{{ url_for('profile') }}">
+                       <i class="fa fa-solid fa-user fa-2x"></i>
+                        <span class="nav-text">
+                            Profile
+                        </span>
+                    </a>
+                    <br>
+                </li>
+                <li class="has-subnav">
+                    <a href="{{ url_for('FAQ') }}">
+                       <i class="fa fa-comments fa-2x"></i>
+                        <span class="nav-text">
+                            Frequently asked Questions
+                        </span>
+                    </a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+
             
             <div class="head-div">
                 <h1 class="heading">User Guide.</h1>
@@ -40,9 +93,7 @@
         <div>
             <li><a class="button1" href="{{ url_for('lesson') }}">Start Lesson</a></li>
         </div>
-        <div>
-            <img class="menu1" src="{{ url_for('static',filename='images/menu1.PNG') }}" alt="">
-        </div>
+
 
             <!--FOOTER-->
         <footer class="site-footer">

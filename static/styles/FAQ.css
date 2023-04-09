@@ -30,31 +30,37 @@
     padding: 15px 30px;
     text-decoration: none;
   }
-  
+  .main-menu
+  {
+    height: 105%;
+  }
   .button
   {
     background-color: #E08955;
   }
-  
+
   .logo{
     width: 100px;
     height: 70px;
     padding-top: 0px;
     top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
   }
-  
+
   .head-div{
     background-color: white;
     position: relative;
     top: 40px;
     margin-left: 150px;
   }
-  
+
   .heading{
     font-size: 30px;
     font-weight: bold;
   }
-  
+
   .menu1{
     width: 100px;
     height: 600px;
@@ -66,18 +72,18 @@
       width: 100px;
       height: 660px;
       position: relative;
-      bottom: 506px; 
+      bottom: 506px;
   }
-  
+
   .para
   {
     font-size: 18px;
     padding-left: 170px;
     padding-right: 65px;
     position: relative;
-    top: 60px; 
+    top: 60px;
   }
-  
+
   .site-footer
   {
     background-color: #0048A4ff;
@@ -87,7 +93,7 @@
     position: relative;
     letter-spacing:0.5px;
     height: 450px;
-    bottom: 530px;
+    top: 82px;
   }
     
   .about

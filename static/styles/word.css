@@ -15,17 +15,17 @@ ul {
 }
 
 li {
-
+  
     float: right;
     position: relative;
     top: 25px;
     margin-left: 10px;
     margin-right: 70px;
-    color: white;
+    color: white;  
 }
 
 li a {
-
+  
   color: white;
   text-align: center;
   padding: 15px 27px;
@@ -34,16 +34,16 @@ li a {
 
 .button1 {
     background-color: #E35A01;
-    position: relative;
+    position: relative;  
     bottom: 350px;
-    right: 8px;
+    right: 80px;
     place-content: center;
 
 }
 
 .button2 {
   background-color: #E35A01;
-  position: relative;
+  position: relative;  
   bottom: 350px;
   right: 80px;
   place-content: center;
@@ -85,7 +85,7 @@ li a {
   left: 150px;
   top: 20px;
 
-}z
+}
 
 .video-panel{
   width: 500px;
@@ -110,10 +110,6 @@ li a {
   top: 500px;
 }
 
-#lessonVideo{
-  width: 500px;
-  object-position: left;
-}
 
 .site-footer
 {
@@ -126,7 +122,7 @@ li a {
   height: 450px;
   bottom: 250px;
 }
-
+  
 .about
 {
   position: relative;
