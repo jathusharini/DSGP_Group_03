@@ -77,23 +77,19 @@
 
 
     <div class="word1">
-        <h1>GREETINGS</h1>
-        <h3>Hello :</h3>
-        <p> <b>exclamation</b><br>
-            used as a greeting or to begin a phone conversation.<br>
-            "<u>hello</u> there, Katie!"<br>
-            <b>noun</b><br>
-            an utterance of ‘hello’; a greeting.<br>
-            "she was getting polite nods and <u>hellos</u> from people"<br>
-            <b>verb</b><br>
-            say or shout ‘hello’.<br>
-            "I pressed the phone button and <u>helloed</u>"
-        </p>
+            <h1>GREETINGS</h1><br>
+            <h3>Hello :</h3>
+            <h3>ආයුබෝවන් :</h3><br>
 
-    </div>
+        </div>
+
+
     <div class="videoref">
-
+        <video autoplay="true" id="lessonVideo" id="videoElement">
+            <source src="{{ url_for('static',filename='video/hello.mp4') }}" type="video/mp4">
+        </video>
     </div>
+
     <div>
       <!--  <img class="menu1" src="{{ url_for('static',filename='images/menu1.PNG') }}" alt="">-->
     </div>
@@ -138,11 +134,11 @@
 
 
     <div class="b1">
-        <li><a class="button1" href="#Skip">Play Again</a></li>
-    </div>
-    <div class="b2">
-        <li><a class="button1" href="#Skip">Try</a></li>
-    </div>
+            <li><a class="button2" href="{{ url_for('goodnight') }}"> Next word </a></li>
+        </div>
+        <div class="b2">
+            <li><a class="button2" href="#Skip" ONCLICK="alert('Hello there!')">Check sign</a></li>
+        </div>
     <div class="b3">
         <li><a class="button1" id="sendBtn">Send</a></li>
     </div>

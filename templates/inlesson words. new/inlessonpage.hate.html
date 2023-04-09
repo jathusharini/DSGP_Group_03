@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign Language Translator</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="google" value="notranslate"/>
+        <link rel="stylesheet" href="inlessonpage.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <meta charset="utf-8">
+        <script src="inlessonpage.js"></script>
+    </head>
+                
+        <body>
+            <nav>
+                <ul>
+                    <img class="logo" src="images\logo.jpeg">
+                    <i class="glyphicon glyphicon-cloud"></i>
+                </ul>
+            </nav>
+
+            <div class="area"></div><nav class="main-menu">
+                <ul>
+                    <li>
+                        <a href="welcomepage.html">
+                            <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text">
+                               Home
+                            </span>
+                        </a>
+                        <br>
+                      
+                    </li>
+                    <li>
+                        <a href="progress.html">
+                            <i class="fa fa-solid fa-signal"></i>
+                            <span class="nav-text">
+                               Progress
+                            </span>
+                        </a>
+                        <br>
+                    </li>
+                    <li>
+                        <a href="lessonpage.html">
+                            <i class="fa fa-book fa-2x"></i>
+                            <span class="nav-text">
+                               Lessons
+                            </span>
+                        </a>
+                        <br>
+                    </li>
+                    <li>
+                       <a href="profile.html">
+                           <i class="fa fa-solid fa-user fa-2x"></i>
+                            <span class="nav-text">
+                                Profile
+                            </span>
+                        </a>
+                        <br>
+                    </li>
+                    <li class="has-subnav">
+                        <a href="FAQ.html">
+                           <i class="fa fa-comments fa-2x"></i>
+                            <span class="nav-text">
+                                Frequently asked Questions
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+              </nav>
+            </div> 
+
+        <div class="word1">
+            <h1>EMOTIONS</h1><br>
+            <h3>hate :</h3>
+            <h3>වෛරය :</h3><br>
+
+        </div> 
+        <div class="videoref">
+            <video class="video-panel" src="C:\Users\HP\OneDrive\Desktop\2nd year lec\data science grp prjct\draft work\SIGN IT FINAL\SIGN IT FINAL\DSGP_Group_03" autoplay="autoplay" controls></video>
+        </div>
+        
+
+        <div id="container">
+            <video autoplay="true" id="videoElement">
+            
+            </video>
+        </div>
+            <!--script>
+                let video = document.querySelector("#videoElement");
+
+                if (navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function (stream) {
+                    video.srcObject = stream;
+                    })
+                    .catch(function (error) {
+                    console.log("Something went wrong!");
+                    })
+                }
+                else{
+                console.log("getUserMedia not supported!");
+                }
+            </script-->
+        <button onclick="detectSign()">Detect sign</button>
+        <div id="result"></div>
+        
+       
+        <div class="b1">
+            <li><a class="button2" href="#Skip"> Next word </a></li>
+        </div>
+        <div class="b2">
+            <li><a class="button2" href="#Skip" ONCLICK="alert('Hello there!')">Check sign</a></li>
+        </div>
+        <div class="b3">
+            <li><a class="button1" id="stopBtn">Stop Recording</a></li>
+        </div>
+        <div class="b4">
+            <li><a class="button1" id="startBtn">Start Recording</a></li>
+        </div>
+               
+        <!--FOOTER-->
+        <footer class="site-footer">
+        <div class="footer">
+                <div class="about">
+                <h6 class="abt">ABOUT</h6>
+                <p class="aboutpara">
+                    This web application can be used to learn sign language which<br>
+                    may be useful in day-to-day life of hearing impaired people. <br>
+                    The goal of the website is to increase awareness and acceptance<br>
+                    of Sinhala sign language, particularly within the deaf and <br>
+                    hard-of-hearing community around the nation. </p>
+                </div>
+
+                <div class="cat1">
+                <h6 class="cat2">CATEGORIES</h6>
+                <p class="cat3">
+                    Greatings.<br>
+                    General.<br>
+                    family.<br>
+                    Emotions.<br>
+                    Places.<br>
+                    Question Words.
+                </p>
+                </div>
+                <div class="ql1">
+                <h6 class="ql2">QUICK LINKS</h6>
+                    <p class="ql3">
+                    About Us<br>
+                    Contact Us<br>
+                    Contribute<br>
+                    Privacy Policy
+                    </p>
+                </div>
+            <hr>
+            
+            <div class="row">
+                <div class="bottom">
+                <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+                    <a href="#">Scanfcode</a>.
+                </p>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <img class="sm" src="images/img54.PNG" alt="">
+                </div>
+                </div>                   
+            </div>
+        </div>
+        </footer>
+
+    </body>
+</html>

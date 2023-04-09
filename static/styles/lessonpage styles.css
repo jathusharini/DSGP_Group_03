@@ -39,8 +39,10 @@ li a {
 .logo{
   width: 100px;
   height: 70px;
-  padding-top: 0px;
+  padding-top: 15px;
   top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 .head-div{
@@ -149,12 +151,9 @@ img {
   left: 70%;
   bottom: 1520px;
 }
-.menu1
+.main-menu
 {
-    width: 100px;
-    height: 660px;
-    position: relative;
-    bottom: 2156px; 
+  height:120%;
 }
 
 .site-footer
@@ -166,9 +165,9 @@ img {
   position: relative;
   letter-spacing:0.5px;
   height: 450px;
-  bottom: 2160px;
+  bottom: 1484px;
 }
-  
+
 .about
 {
   position: relative;
@@ -231,10 +230,6 @@ hr
   margin:30px;
   opacity:2;
   bottom: 400px;
-}
-.button1
-{
-  background-color: #E08955;
 }
 
 .copyright-text
