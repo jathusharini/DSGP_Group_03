@@ -19,7 +19,7 @@
 <body>
     <nav>
         <ul>
-           <img class="logo" src="{{ url_for('static',filename='images/logo.jpeg') }}">
+             <img class="logo" src="{{ url_for('static',filename='images/logo.jpeg') }}">
             <i class="glyphicon glyphicon-cloud"></i>
         </ul>
     </nav>
@@ -78,14 +78,14 @@
 
     <div class="word1">
             <h1>GENERAL</h1><br>
-            <h3>SORRY :</h3>
-            <h3>සමාවන්න :</h3><br>
+            <h3>HELP :</h3>
+            <h3>උදව් :</h3><br>
 
         </div>
 
     <div class="videoref">
         <video autoplay="true" id="lessonVideo" id="videoElement">
-            <source src="{{ url_for('static',filename='video/sorry.mp4') }}" type="video/mp4">
+            <source src="{{ url_for('static',filename='video/help.mp4') }}" type="video/mp4">
         </video>
     </div>
 
@@ -134,7 +134,7 @@
 
 
     <div class="b1">
-            <li><a class="button2" href="{{ url_for('help') }}"> Next word </a></li>
+            <li><a class="button2" href="{{ url_for('excuseme') }}"> Next word </a></li>
         </div>
         <div class="b2">
             <li><a class="button2" href="#Skip" ONCLICK="alert('Wrong Prediction!')">Check sign</a></li>
