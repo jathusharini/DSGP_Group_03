@@ -110,6 +110,206 @@ def get_prediction(video):
             print(result)
             answer(False,result)
 
+    elif "sorry" in url:
+        if "sorry" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "help" in url:
+        if "help" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "welcome" in url:
+        if "welcome" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "excuseme" in url:
+        if "excuseme" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "thankyou" in url:
+        if "thankyou" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "father" in url:
+        if "father" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "mother" in url:
+        if "mother" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "sister" in url:
+        if "sister" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "brother" in url:
+        if "brother" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "happy" in url:
+        if "happy" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "sad" in url:
+        if "sad" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "love" in url:
+        if "love" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "hungry" in url:
+        if "hungry" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "angry" in url:
+        if "angry" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "homes" in url:
+        if "homes" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "bank" in url:
+        if "bank" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "school" in url:
+        if "school" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "hospital" in url:
+        if "hospital" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "policeststion" in url:
+        if "policestation" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "how" in url:
+        if "how" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "what" in url:
+        if "what" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "when" in url:
+        if "when" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "where" in url:
+        if "where" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "who" in url:
+        if "who" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
+    elif "why" in url:
+        if "why" in result:
+            print(result)
+            answer(True, result)
+        else:
+            print(result)
+            answer(False, result)
+
     return result
 
 def index():
@@ -315,6 +515,7 @@ def profile():
     title = 'Profile'
     return render_template('profile.html', title=title)
 #---------------------------------------------------------------------------------------------------------
+#=========================================GREETINGS======================================================
 @ app.route('/hello')
 def hello():
     title = 'Hello'
@@ -346,6 +547,137 @@ def goodevening():
     url = index()
     return render_template('inlessonpage.goodevening.html', title=title)
 
+#=========================================GENERAL============================================================
+@ app.route('/welcome')
+def welcome():
+    title = 'You Are Welcome'
+    url = index()
+    return render_template('inlessonpage.welcome.html', title=title)
+@ app.route('/excuseme')
+def excuseme():
+    title = 'Excuse me'
+    url = index()
+    return render_template('inlessonpage.excuseme.html', title=title)
+@ app.route('/thankyou')
+def thankyou():
+    title = 'Thankyou'
+    url = index()
+    return render_template('inlessonpage.thankyou.html', title=title)
+@ app.route('/sorry')
+def sorry():
+    title = 'Sorry'
+    url = index()
+    return render_template('inlessonpage.sorry.html', title=title)
+@ app.route('/help')
+def help():
+    title = 'Help'
+    url = index()
+    return render_template('inlessonpage.help.html', title=title)
+#=========================================FAMILY=============================================================
+@ app.route('/father')
+def father():
+    title = 'Father'
+    url = index()
+    return render_template('inlessonpage.father.html', title=title)
+@ app.route('/mother')
+def mother():
+    title = 'Mother'
+    url = index()
+    return render_template('inlessonpage.mother.html', title=title)
+@ app.route('/sister')
+def sister():
+    title = 'Sister'
+    url = index()
+    return render_template('inlessonpage.sister.html', title=title)
+@ app.route('/brother')
+def brother():
+    title = 'Brother'
+    url = index()
+    return render_template('inlessonpage.brother.html', title=title)
+
+#=========================================EMOTIONS=============================================================
+@ app.route('/happy')
+def happy():
+    title = 'Happy'
+    url = index()
+    return render_template('inlessonpage.happy.html', title=title)
+@ app.route('/sad')
+def sad():
+    title = 'Sad'
+    url = index()
+    return render_template('inlessonpage.sad.html', title=title)
+@ app.route('/love')
+def love():
+    title = 'Love'
+    url = index()
+    return render_template('inlessonpage.love.html', title=title)
+@ app.route('/hungry')
+def hungry():
+    title = 'Hungry'
+    url = index()
+    return render_template('inlessonpage.hungry.html', title=title)
+@ app.route('/angry')
+def angry():
+    title = 'Angry'
+    url = index()
+    return render_template('inlessonpage.angry.html', title=title)
+#=========================================PLACES=============================================================
+@ app.route('/homes')
+def homes():
+    title = 'Home'
+    url = index()
+    return render_template('inlessonpage.home.html', title=title)
+@ app.route('/hospital')
+def hospital():
+    title = 'Hospital'
+    url = index()
+    return render_template('inlessonpage.hospital.html', title=title)
+@ app.route('/school')
+def school():
+    title = 'School'
+    url = index()
+    return render_template('inlessonpage.school.html', title=title)
+@ app.route('/bank')
+def bank():
+    title = 'Bank'
+    url = index()
+    return render_template('inlessonpage.bank.html', title=title)
+@ app.route('/policestation')
+def policestation():
+    title = 'Police station'
+    url = index()
+    return render_template('inlessonpage.policestation.html', title=title)
+#=========================================QUESTION WORDS=============================================================
+@ app.route('/how')
+def how():
+    title = 'How'
+    url = index()
+    return render_template('inlessonpage.how.html', title=title)
+@ app.route('/what')
+def what():
+    title = 'What'
+    url = index()
+    return render_template('inlessonpage.what.html', title=title)
+@ app.route('/when')
+def when():
+    title = 'When'
+    url = index()
+    return render_template('inlessonpage.when.html', title=title)
+@ app.route('/where')
+def where():
+    title = 'Where'
+    url = index()
+    return render_template('inlessonpage.where.html', title=title)
+@ app.route('/who')
+def who():
+    title = 'Who'
+    url = index()
+    return render_template('inlessonpage.who.html', title=title)
+@ app.route('/why')
+def why():
+    title = 'Why'
+    url = index()
+    return render_template('inlessonpage.why.html', title=title)
 
 
 # Run Flask app
